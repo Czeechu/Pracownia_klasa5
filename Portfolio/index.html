@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alicja Nowak</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .skill-item {
+            margin-bottom: 10px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-details {
+            margin-left: 20px;
+        }
+
+        .skills-list {
+            margin-top: 30px;
+        }
+        .skill-item::before {
+        content: "•";
+        color: #007bff;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <img src="mike.png" alt="Alicja Nowak" class="profile-image">
+            <div class="profile-details">
+                <p>THIS IS</p>
+                <h1>Alicja Nowak</h1>
+                <p>I'm a Frontend Developer passionate abaout creating new websites, currently looking
+                     for new job opportunities.</p>
+                <a href="mailto:alicja@gmail.com" class="btn btn-custom">Zatrudnij mnie</a>
+            </div>
+        </div>
+        
+        <div id="skills-container"></div>
+    
+    
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+  <script type="text/babel">
+    function ShowAll() {
+      return (
+        <div className="skills-list">
+          <h3 className="section-title">
+            Moje umiejętności <span role="img" aria-label="tools">🛠️</span>
+          </h3>
+          <hr />
+          <div className="row">
+            <div className="col-md-4">
+              <ul className="list-unstyled">
+                <li className="skill-item"><i className="fas fa-check"></i> React.js</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Create React App</li>
+                <li className="skill-item"><i className="fas fa-check"></i> JavaScript</li>
+                <li className="skill-item"><i className="fas fa-check"></i> CSS: Media Queries</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Teamwork</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Redux</li>
+              </ul>
+            </div>
+            <div className="col-md-4">
+              <ul className="list-unstyled">
+                <li className="skill-item"><i className="fas fa-check"></i> Styled Components</li>
+                <li className="skill-item"><i className="fas fa-check"></i> NPM</li>
+                <li className="skill-item"><i className="fas fa-check"></i> CSS: Flex box</li>
+                <li className="skill-item"><i className="fas fa-check"></i> CSS: Grid</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Trello</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Redux Toolkit</li>
+              </ul>
+            </div>
+            <div className="col-md-4">
+              <ul className="list-unstyled">
+                <li className="skill-item"><i className="fas fa-check"></i> React Hooks</li>
+                <li className="skill-item"><i className="fas fa-check"></i> HTML</li>
+                <li className="skill-item"><i className="fas fa-check"></i> CSS: Animations/Keyframes</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Figma</li>
+                <li className="skill-item"><i class="fas fa-check"></i> React-Router</li>
+                <li className="skill-item"><i className="fas fa-check"></i> Redux-Saga</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      return <ShowAll />;
+    }
+
+    ReactDOM.render(<App />, document.getElementById('skills-container'));
+  </script>
+
+    
+</body>
+
+</html>
